@@ -1,69 +1,19 @@
-# Getting Started with Create React App
+# Website-Design-for-Drone-Company
+I designed and implemented a website for an imaginary company called Sky Tech which sale drones.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## UI Design for website made on Figma
 
-## Available Scripts
+- All the pictures on the website were taken from the internet and will only be use as for project purposes
+- All the icons on the website were made by me using figma.
+- This will only be a one page website and some of the website's features such as learn more button won't actually work but only be done to show case my skills and what I can do.
+- The color scheme of this website is a mix of blue ![#3F95C6](https://placehold.co/15x15/3F95C6/3F95C6.png) `#3F95C6` , white ![#FFFFFF](https://placehold.co/15x15/FFFFFF/FFFFFF.png) `#FFFFFF` and black with an opacity of 50% which gives a tone of gray.
+  
+https://github.com/Youssefchahboune/Website-Design-for-Drone-Company/assets/99833243/53cd2e40-d126-48d1-aa0b-3f61110dc0bf
 
-In the project directory, you can run:
+https://github.com/Youssefchahboune/Website-Design-for-Drone-Company/assets/99833243/4f44baae-c289-4f31-a001-8ec682a5ccc3
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Implementation
 
 ### `npm run build` fails to minify
 
