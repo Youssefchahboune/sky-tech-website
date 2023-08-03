@@ -5,6 +5,10 @@ function App() {
     <div>
 
       <WebsiteHeader></WebsiteHeader>
+
+      <div id="productSection" class="text-center py-96">
+        Product Section Test
+      </div>
       
     </div>
   );

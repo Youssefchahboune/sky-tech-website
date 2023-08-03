@@ -25,6 +25,7 @@ module.exports = {
       stone: colors.stone,
       red: colors.red,
       green: colors.green,
+      'skyTechBlue' : '#3F95C6',
     },
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
