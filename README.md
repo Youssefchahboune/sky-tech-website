@@ -10,9 +10,4 @@ I designed and implemented a website for an imaginary company called Sky Tech wh
 
 ![image](https://github.com/Youssefchahboune/sky-tech-website/assets/99833243/11330082-29cb-4cc0-a3c1-d0afc53ab52f)
 
-![image](https://github.com/Youssefchahboune/sky-tech-website/assets/99833243/b48bf52e-a138-418f-8cf8-bfcafed30511) ![image](https://github.com/Youssefchahboune/sky-tech-website/assets/99833243/a354a8d0-ba87-4453-95f2-ec4b0e6fd825)
-![image](https://github.com/Youssefchahboune/sky-tech-website/assets/99833243/5d05c3bf-b297-4855-aeea-545069ae2ce8)
-
-
-
 ## Implementation
