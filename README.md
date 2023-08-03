@@ -14,7 +14,3 @@ https://github.com/Youssefchahboune/Website-Design-for-Drone-Company/assets/9983
 
 
 ## Implementation
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
