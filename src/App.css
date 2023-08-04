@@ -7,11 +7,24 @@ div {
 }
 
 .navBarLink {
-    transition: transform 0.3s ease-in-out;
-    border-bottom: none;
+  transition: transform 0.3s ease-in-out;
+  border-bottom: none;
+}
+
+.navBarLink:hover {
+  transform: translateY(-5px);
+  border-bottom: 2px solid #3F95C6;
+}
+
+@keyframes custom-rotate {
+  from {
+    transform: rotate(0deg);
   }
-  
-  .navBarLink:hover {
-    transform: translateY(-5px);
-    border-bottom: 2px solid #3F95C6;
+  to {
+    transform: rotate(360deg);
   }
+}
+
+.animate-custom-rotate {
+  animation: custom-rotate 10s linear infinite;
+}
