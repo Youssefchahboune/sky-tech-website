@@ -5,3 +5,13 @@
 div {
     font-family: 'Karantina', cursive;
 }
+
+.navBarLink {
+    transition: transform 0.3s ease-in-out;
+    border-bottom: none;
+  }
+  
+  .navBarLink:hover {
+    transform: translateY(-5px);
+    border-bottom: 2px solid #3F95C6;
+  }

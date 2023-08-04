@@ -4,7 +4,7 @@ import { Link } from 'react-scroll';
 
 function ScrollToSectionButton(props) {
     return (
-        <button class='bg-[#3F95C6] py-[2px] w-[100px] text-left pl-[14px] rounded-full'>
+        <button class='bg-[#3F95C6] py-[2px] w-[100px] text-left pl-[14px] rounded-full transform transition-transform duration-300 ease-in-out hover:translate-x-5'>
             <Link to={props.id} smooth={true} duration={500}>
 
                 <div class='flex flex-row gap-3'>
