@@ -8,5 +8,6 @@ I designed and implemented a website for an imaginary company called Sky Tech wh
 - This will only be a one page website and some of the website's features such as learn more button won't actually work but only be done to show case my skills and what I can do.
 - The color scheme of this website is a mix of blue ![#3F95C6](https://placehold.co/15x15/3F95C6/3F95C6.png) `#3F95C6` , white ![#FFFFFF](https://placehold.co/15x15/FFFFFF/FFFFFF.png) `#FFFFFF` and black with an opacity of 50% which gives a tone of gray.
 
+![image](https://github.com/Youssefchahboune/sky-tech-website/assets/99833243/11330082-29cb-4cc0-a3c1-d0afc53ab52f)
 
 ## Implementation
