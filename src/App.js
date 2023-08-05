@@ -3,7 +3,7 @@ import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import WebsiteHeader from './components/WebsiteHeader';
 import TopFeatures from './components/TopFeatures';
-import { motion } from "framer-motion"
+import VideoDisplay from './components/VideoDisplay';
 
 function App() {
 
@@ -97,6 +97,8 @@ function App() {
     }
   };
 
+  const videoYoutubeURLOfADrone = "https://www.youtube.com/embed/xi85DAbv5oU?autoplay=1&loop=1&playlist=xi85DAbv5oU&mute=1&controls=0";
+
   const appOnPhoneText = <div style={{color : "rgba(0,0,0,0.5)"}} class="">Our intuitive <span class="text-skyTechBlue">app</span> efficiently controls the drone with ease.</div>;
   const fligthTimeText = <div style={{color : "rgba(0,0,0,0.5)"}} class="">Our drones have a remarkable <span class="text-skyTechBlue">2 hour</span> flight time. </div>;
   const resolution4KText = <div style={{color : "rgba(0,0,0,0.5)"}} class="">The camera resolution is <span class="text-skyTechBlue">4K</span>, providing stunning visuals.</div>;
@@ -145,19 +147,22 @@ function App() {
 
     <div>
 
-      <div class="flex justify-end mr-16 ">
-        <button onClick={() => scrollToTopOfWindow()} class="fixed text-white z-10 rounded-full w-10 h-10 bottom-14 opacity-50 transition hover:opacity-100 ease-in-out">
+      {/* Floating Go To Top Button */}
+      <div class="flex justify-end mr-[5%] ">
+        <button onClick={() => scrollToTopOfWindow()} class="fixed text-white z-10 rounded-full w-10 h-10 bottom-14 opacity-50 transition duration-500 hover:opacity-100 ease-in-out">
           {generateGoToTopBtnDesign()}
         </button>
       </div>
       
-
+      {/* Website Header */}
       <WebsiteHeader />
 
+      {/* Spinning logo stamp */}
       <div class="opacity-50 flex justify-center my-32 animate-custom-rotate">
         {generateLogoStampSVG()}
       </div>
 
+      {/* Top features component */}
       <div class="flex justify-center gap-28 mb-28 flex-wrap">
 
         <TopFeatures svg={generatePhoneSVG()} textDiv={appOnPhoneText}/>
@@ -168,6 +173,7 @@ function App() {
 
       </div>
 
+      {/* Gallery photo with carousel using npm pakage ract-multi-carousel*/}
       <div id='gallerySection' class="mb-44 text-center">
 
         <div style={{color : "rgba(0,0,0,0.5)"}} class="text-[40px] flex gap-2 justify-center"> <div>Photo</div> <div class="animate-bounce text-skyTechBlue">Gallery</div></div>
@@ -200,6 +206,12 @@ function App() {
           </div>
 
         </Carousel>
+      </div>
+
+      <div class="mb-20">
+
+        <VideoDisplay videoYoutubeURL={videoYoutubeURLOfADrone} />
+
       </div>
       
     </div>

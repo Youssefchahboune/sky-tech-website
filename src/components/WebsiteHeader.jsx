@@ -19,7 +19,7 @@ function WebsiteHeader() {
             <div class='flex flex-col gap-12 ml-[65px] mt-44 absolute inset-0'>
                 <div style={{lineHeight : "1.05"}} class='text-white text-[80px] w-[700px]'>
                     <span class='text-skyTechBlue'>Sky</span> Tech: Elevating the Future 
-                    with Cutting-Edge <span class='text-skyTechBlue'>Drones</span>
+                    with Cutting-Edge <span class="text-skyTechBlue">Drones</span>
                 </div>
 
                 <div style={{lineHeight : "1.05", letterSpacing: "1.5px"}} class='text-white font-light text-[18px] w-[575px] opacity-[85%] border-l-2 border-l-white pl-3'>
