@@ -4,6 +4,9 @@ import "react-multi-carousel/lib/styles.css";
 import WebsiteHeader from './components/WebsiteHeader';
 import TopFeatures from './components/TopFeatures';
 import VideoDisplay from './components/VideoDisplay';
+import { useEffect, useState } from 'react';
+import ReviewCard from './components/ReviewCard';
+
 
 function App() {
 
@@ -103,6 +106,10 @@ function App() {
   const fligthTimeText = <div style={{color : "rgba(0,0,0,0.5)"}} class="">Our drones have a remarkable <span class="text-skyTechBlue">2 hour</span> flight time. </div>;
   const resolution4KText = <div style={{color : "rgba(0,0,0,0.5)"}} class="">The camera resolution is <span class="text-skyTechBlue">4K</span>, providing stunning visuals.</div>;
 
+  const learnMoreWindowPhone = ["Our Intuitive App", "[...]"];
+  const learnMoreWindowTimer = ["Timer Info", "[...]"];
+  const learnMoreWindow4K = ["4K Resolution", "4K resolution cameras on drones have revolutionized aerial imagery, delivering unparalleled clarity and detail. With approximately 4,000 pixels in width, these cameras capture vibrant colors and intricate textures, creating stunning visuals from the sky. Whether it's landscapes or cityscapes, the resulting footage is not only visually captivating but also versatile, finding applications in cinema, documentaries, travel vlogs, and marketing. As technology advances, the fusion of drones and 4K cameras continues to push the boundaries of visual storytelling, offering fresh perspectives and endless possibilities."];
+
   const scrollToTopOfWindow = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -143,9 +150,51 @@ function App() {
     );
   }
 
+  const arrayOfUSer = [
+    {userName : "Youssef Chahboune", imageURL : "/droneIMG2.jpg", message : " The first thing that struck me was the impressive array of drone models available. SkyTech Drones offers beginners dipping their toes into the drone world seeking cutting-edge technology.", numberOfStars: 4} ,
+    {userName : "Nicholas Martottia", imageURL : "/droneIMG5.jpg", message : " The first thing that struck me was the impressive array of drone models available. SkyTech Drones offers beginners dipping their toes into the drone world seeking cutting-edge technology.", numberOfStars: 5} ,
+    {userName : "Tawfiq Jahar", imageURL : "/droneIMG1.jpg", message : " The first thing that struck me was the impressive array of drone models available. SkyTech Drones offers beginners dipping their toes into the drone world seeking cutting-edge technology.", numberOfStars: 4} ,
+  ]
+
+  const [learnMoreWindow, setLearnMoreWindow] = useState([]);
+
+  useEffect(() => {
+    if (learnMoreWindow.length !== 0) {
+      document.body.classList.add('no-scroll');
+    } else {
+      document.body.classList.remove('no-scroll');
+    }
+  }, [learnMoreWindow]);
+ 
   return (
 
     <div>
+
+      {learnMoreWindow.length == 0 ? 
+      
+        <></> 
+        
+        : 
+        
+        /* pop up Learn more message */
+        <div class="fixed inset-0 flex items-center justify-center z-50 bg-[rgba(0,0,0,0.5)] ">
+          <div class="w-3/4 h-3/5 bg-white mt-9 rounded-md p-5">
+            
+            <div class="flex justify-end">
+              <button onClick={() => setLearnMoreWindow([])} class="w-8 bg-skyTechBlue text-white h-8 mx-2 rounded-md">X</button>
+            </div>
+
+            <div class="text-center text-black opacity-50 text-[25px] mb-4 mt-5">
+              {learnMoreWindow[0]}
+            </div>
+
+            <div class="text-center text-black opacity-50 font-light text-[20px] px-[12%]">
+              <p style={{lineheight: "1.5", letterspacing: "1px"}} class="mb-4">{learnMoreWindow[1]}</p>
+            </div>
+          </div>
+        </div>
+        
+      }
 
       {/* Floating Go To Top Button */}
       <div class="flex justify-end mr-[5%] ">
@@ -165,11 +214,11 @@ function App() {
       {/* Top features component */}
       <div class="flex justify-center gap-28 mb-28 flex-wrap">
 
-        <TopFeatures svg={generatePhoneSVG()} textDiv={appOnPhoneText}/>
+        <TopFeatures setLearnMoreMessage={setLearnMoreWindow} message={learnMoreWindowPhone} svg={generatePhoneSVG()} textDiv={appOnPhoneText}/>
 
-        <TopFeatures svg={generateTimerSVG()} textDiv={fligthTimeText}/>
+        <TopFeatures setLearnMoreMessage={setLearnMoreWindow} message={learnMoreWindowTimer} svg={generateTimerSVG()} textDiv={fligthTimeText}/>
 
-        <TopFeatures svg={generate4kCameraSVG()} textDiv={resolution4KText}/>
+        <TopFeatures setLearnMoreMessage={setLearnMoreWindow} message={learnMoreWindow4K} svg={generate4kCameraSVG()} textDiv={resolution4KText}/>
 
       </div>
 
@@ -178,7 +227,7 @@ function App() {
 
         <div style={{color : "rgba(0,0,0,0.5)"}} class="text-[40px] flex gap-2 justify-center"> <div>Photo</div> <div class="animate-bounce text-skyTechBlue">Gallery</div></div>
 
-        <div style = {{lineHeight : "1.05", letterSpacing : "1px"}} class="text-black opacity-50 flex justify-center font-light text-[25px] mb-10"> 
+        <div style = {{lineHeight : "1.05", letterSpacing : "1px"}} class="text-black opacity-50 flex justify-center font-light text-[23px] mb-10"> 
           <div class="w-[660px]">
             Explore breathtaking aerial masterpieces in our drone photo gallery. With 4K camera resolution, 
             each photo captures stunning landscapes and iconic landmarks. Immerse yourself in our high- performance drones' artistry.
@@ -208,12 +257,51 @@ function App() {
         </Carousel>
       </div>
 
-      <div class="mb-20">
+      {/* show case video with text on the side component*/} 
+      <div id='videoSection' class="mb-20">
 
-        <VideoDisplay videoYoutubeURL={videoYoutubeURLOfADrone} />
+        <VideoDisplay videoYoutubeURL={videoYoutubeURLOfADrone} learnMoreMessage={setLearnMoreWindow} />
 
       </div>
       
+      {/* Customer Reviews Section */}
+      <div id='reviewsSection' class="pt-20 mb-20">
+        <div style={{color : "rgba(0,0,0,0.5)"}} class="text-[40px] flex gap-2 justify-center"> <div>Customer</div> <div class="animate-bounce text-skyTechBlue">Reviews</div></div>
+
+        <div style = {{lineHeight : "1.05", letterSpacing : "1px"}} class="text-black opacity-50 flex justify-center font-light text-[23px] mb-10"> 
+          <div class="w-[660px] text-center">
+            Explore breathtaking aerial masterpieces in our drone photo gallery. With 4K camera resolution, 
+            each photo captures stunning landscapes and iconic landmarks. Immerse yourself in our high- performance drones' artistry.
+          </div>
+        </div>
+
+        <div class="flex justify-center gap-5 flex-wrap pt-5">
+          {/* 3 review card component to be added here with proper value */}
+
+
+          {arrayOfUSer.map((user) => (
+            <ReviewCard user={user}/>
+          ))}
+
+        </div>
+
+        <div class=" mt-12">
+          <a class="flex flex-row justify-center cursor-pointer hover:translate-x-3 duration-300 ease-in-out">
+            <div class="text-skyTechBlue text-xl"> Read More </div>
+
+            <div class="mt-3 ml-4">
+              <svg width="" height="10" viewBox="0 0 38 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M37.3536 4.35355C37.5488 4.15829 37.5488 3.84171 37.3536 3.64645L34.1716 0.464466C33.9763 0.269204 33.6597 0.269204 33.4645 0.464466C33.2692 0.659728 33.2692 0.976311 33.4645 1.17157L36.2929 4L33.4645 6.82843C33.2692 7.02369 33.2692 7.34027 33.4645 7.53553C33.6597 7.7308 33.9763 7.7308 34.1716 7.53553L37.3536 4.35355ZM0 4.5H37V3.5H0V4.5Z" fill="#3F95C6"/>
+              </svg>
+            </div>
+          </a>
+          
+
+          
+          
+        </div>
+      </div>
+ 
     </div>
   );
 }

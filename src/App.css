@@ -28,3 +28,7 @@ div {
 .animate-custom-rotate {
   animation: custom-rotate 10s linear infinite;
 }
+
+.no-scroll {
+  overflow: hidden;
+}

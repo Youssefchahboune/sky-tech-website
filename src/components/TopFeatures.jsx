@@ -15,7 +15,7 @@ function TopFeatures(props) {
                 {props.textDiv}
             </div>
 
-            <button>
+            <button class="hover:translate-x-3 duration-300 ease-in-out" onClick={() => props.setLearnMoreMessage(props.message)}>
                 <div class="text-skyTechBlue flex gap-3 justify-center">
                     <div class="text-2xl" style={{letterSpacing: "1.5px"}}>
                     Learn more  
