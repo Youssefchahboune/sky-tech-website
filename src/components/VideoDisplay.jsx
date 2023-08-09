@@ -41,7 +41,7 @@ function VideoDisplay(props) {
 
                             props.learnMoreMessage(titleAndMessagePopUp);
                             
-                            }} class="text-skyTechBlue text-[17px] rounded-sm border-2 px-4 border-skyTechBlue flex gap-3 justify-center hover:bg-skyTechBlue hover:-translate-y-1 hover:text-white duration-500 ease-in-out">
+                            }} class="text-skyTechBlue text-[17px] shadow-md rounded-sm border-2 px-4 border-skyTechBlue flex gap-3 justify-center hover:bg-skyTechBlue hover:-translate-y-1 hover:text-white duration-500 ease-in-out">
                            Learn More
                         </button>
                     </div>

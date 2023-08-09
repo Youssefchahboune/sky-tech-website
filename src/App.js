@@ -6,7 +6,7 @@ import TopFeatures from './components/TopFeatures';
 import VideoDisplay from './components/VideoDisplay';
 import { useEffect, useState } from 'react';
 import ReviewCard from './components/ReviewCard';
-
+import ProductSelector from './components/ProductSelector';
 
 function App() {
 
@@ -151,9 +151,9 @@ function App() {
   }
 
   const arrayOfUSer = [
-    {userName : "Youssef Chahboune", imageURL : "/droneIMG2.jpg", message : " The first thing that struck me was the impressive array of drone models available. SkyTech Drones offers beginners dipping their toes into the drone world seeking cutting-edge technology.", numberOfStars: 4} ,
+    {userName : "Youssef Chahboune", imageURL : "/droneIMG2.jpg", message : "SkyTech's exceptional service deserves a special mention. From the moment I made my purchase to every flight thereafter, the experience has been seamless. Their customer service is the best !", numberOfStars: 4} ,
     {userName : "Nicholas Martottia", imageURL : "/droneIMG5.jpg", message : " The first thing that struck me was the impressive array of drone models available. SkyTech Drones offers beginners dipping their toes into the drone world seeking cutting-edge technology.", numberOfStars: 5} ,
-    {userName : "Tawfiq Jahar", imageURL : "/droneIMG1.jpg", message : " The first thing that struck me was the impressive array of drone models available. SkyTech Drones offers beginners dipping their toes into the drone world seeking cutting-edge technology.", numberOfStars: 4} ,
+    {userName : "Tawfiq Jahar", imageURL : "/droneIMG1.jpg", message : "The selection of drones at SkyTech is truly unparalleled. After getting my hands on one, I've been absolutely hooked and can't seem to put it down! I'm incredibly impressed with the range of options they offer.", numberOfStars: 4} ,
   ]
 
   const [learnMoreWindow, setLearnMoreWindow] = useState([]);
@@ -178,17 +178,17 @@ function App() {
         
         /* pop up Learn more message */
         <div class="fixed inset-0 flex items-center justify-center z-50 bg-[rgba(0,0,0,0.5)] ">
-          <div class="w-3/4 h-3/5 bg-white mt-9 rounded-md p-5">
+          <div class="w-3/4 h-3/5 bg-white mt-9 rounded-md p-5 border-4 border-solid border-skyTechBlue">
             
             <div class="flex justify-end">
-              <button onClick={() => setLearnMoreWindow([])} class="w-8 bg-skyTechBlue text-white h-8 mx-2 rounded-md">X</button>
+              <button onClick={() => setLearnMoreWindow([])} class="w-8 bg-skyTechBlue text-white h-8 mx-2 rounded-md opacity-100 hover:opacity-75 duration-300 ease-in-out">X</button>
             </div>
 
             <div class="text-center text-black opacity-50 text-[25px] mb-4 mt-5">
               {learnMoreWindow[0]}
             </div>
 
-            <div class="text-center text-black opacity-50 font-light text-[20px] px-[12%]">
+            <div class="text-center text-black opacity-50 font-light text-[20px] px-[12%]" style = {{ letterSpacing : "0.5px"}}>
               <p style={{lineheight: "1.5", letterspacing: "1px"}} class="mb-4">{learnMoreWindow[1]}</p>
             </div>
           </div>
@@ -263,6 +263,22 @@ function App() {
         <VideoDisplay videoYoutubeURL={videoYoutubeURLOfADrone} learnMoreMessage={setLearnMoreWindow} />
 
       </div>
+
+
+      {/* Product Section showcasing 3 drones */}
+      <div class="pt-20 mb-20" id="productsSection">
+
+        <div style={{color : "rgba(0,0,0,0.5)"}} class="text-[40px] flex gap-2 justify-center"> <div>Drones / </div> <div class="animate-bounce text-skyTechBlue">Products</div></div>
+
+        <div style = {{lineHeight : "1.05", letterSpacing : "1px"}} class="text-black opacity-50 flex justify-center font-light text-[23px] mb-10"> 
+          <div class="w-[660px] text-center">
+          Elevate your exploration with our curated collection of cutting-edge drones. Discover your perfect airborne companion at SkyTech Drones
+          </div>
+        </div>
+
+        <ProductSelector />
+
+      </div>
       
       {/* Customer Reviews Section */}
       <div id='reviewsSection' class="pt-20 mb-20">
@@ -285,8 +301,8 @@ function App() {
 
         </div>
 
-        <div class=" mt-12">
-          <a class="flex flex-row justify-center cursor-pointer hover:translate-x-3 duration-300 ease-in-out">
+        <div class="mt-12">
+          <a class="flex flex-row justify-center cursor-pointer hover:translate-x-1 duration-300 ease-in-out">
             <div class="text-skyTechBlue text-xl"> Read More </div>
 
             <div class="mt-3 ml-4">
