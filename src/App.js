@@ -7,6 +7,7 @@ import VideoDisplay from './components/VideoDisplay';
 import { useEffect, useState } from 'react';
 import ReviewCard from './components/ReviewCard';
 import ProductSelector from './components/ProductSelector';
+import ContactSection from './components/ContactSection';
 
 function App() {
 
@@ -232,7 +233,7 @@ function App() {
       {/* Gallery photo with carousel using npm pakage ract-multi-carousel*/}
       <div id='gallerySection' class="mb-28 text-center">
 
-        <div style={{color : "rgba(0,0,0,0.5)"}} class="text-[40px] flex gap-2 justify-center"> <div>Photo</div> <div class="animate-bounce text-skyTechBlue">Gallery</div></div>
+        <div style={{color : "rgba(0,0,0,0.5)"}} class="text-[40px] flex gap-2 justify-center"> <div>Photos</div> <div class="animate-bounce text-skyTechBlue">Gallery</div></div>
 
         <div style = {{lineHeight : "1.05", letterSpacing : "1px"}} class="text-black opacity-50 flex justify-center font-light text-[23px] mb-10"> 
           <div class="w-[660px]">
@@ -287,7 +288,7 @@ function App() {
       </div>      
       
       {/* Customer Reviews Section */}
-      <div id='reviewsSection' class="mb-20">
+      <div id='reviewsSection' class="mb-32">
         <div style={{color : "rgba(0,0,0,0.5)"}} class="text-[40px] flex gap-2 justify-center"> <div>Customer</div> <div class="animate-bounce text-skyTechBlue">Reviews</div></div>
 
         <div style = {{lineHeight : "1.05", letterSpacing : "1px"}} class="text-black opacity-50 flex justify-center font-light text-[23px] mb-10"> 
@@ -324,6 +325,12 @@ function App() {
         </div>
       </div>
 
+      {/* Contact Section */}
+      <div id='contactUsSection' class="pb-28">
+        <ContactSection />
+      </div>
+
+      {/* bottom section */}
       <div class="h-96 bg-skyTechBlue">
         
       </div>
