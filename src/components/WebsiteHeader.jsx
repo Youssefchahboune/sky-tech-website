@@ -27,7 +27,7 @@ function WebsiteHeader() {
                 </div>
 
                 <div >
-                    <ScrollToSectionButton id="productSection" buttonText="Products" ></ScrollToSectionButton>
+                    <ScrollToSectionButton id="productsSection" buttonText="Products" ></ScrollToSectionButton>
                 </div>
             </div>
 

@@ -178,19 +178,26 @@ function App() {
         
         /* pop up Learn more message */
         <div class="fixed inset-0 flex items-center justify-center z-50 bg-[rgba(0,0,0,0.5)] ">
-          <div class="w-3/4 h-3/5 bg-white mt-9 rounded-md p-5 border-4 border-solid border-skyTechBlue">
-            
-            <div class="flex justify-end">
+          
+          <div class="absolute top-[28%] right-[15%]">
               <button onClick={() => setLearnMoreWindow([])} class="w-8 bg-skyTechBlue text-white h-8 mx-2 rounded-md opacity-100 hover:opacity-75 duration-300 ease-in-out">X</button>
+          </div>
+
+          <div class=" flex w-3/4 h-3/5 justify-center bg-white mt-9 rounded-md p-5 border-4 border-solid border-skyTechBlue items-center">
+            
+            <div class="flex flex-col items-center">
+
+              <div class="text-center text-black opacity-50 text-[25px] mb-4 mt-5">
+                {learnMoreWindow[0]}
+              </div>
+
+              <div class="text-center text-black opacity-50 font-light text-[20px] px-[12%]" style = {{ letterSpacing : "0.5px"}}>
+                <p style={{lineheight: "1.5", letterspacing: "1px"}} class="mb-4">{learnMoreWindow[1]}</p>
+              </div>
+
             </div>
 
-            <div class="text-center text-black opacity-50 text-[25px] mb-4 mt-5">
-              {learnMoreWindow[0]}
-            </div>
-
-            <div class="text-center text-black opacity-50 font-light text-[20px] px-[12%]" style = {{ letterSpacing : "0.5px"}}>
-              <p style={{lineheight: "1.5", letterspacing: "1px"}} class="mb-4">{learnMoreWindow[1]}</p>
-            </div>
+           
           </div>
         </div>
         
@@ -202,7 +209,7 @@ function App() {
           {generateGoToTopBtnDesign()}
         </button>
       </div>
-      
+
       {/* Website Header */}
       <WebsiteHeader />
 
@@ -210,9 +217,9 @@ function App() {
       <div class="opacity-50 flex justify-center my-32 animate-custom-rotate">
         {generateLogoStampSVG()}
       </div>
-
+      
       {/* Top features component */}
-      <div class="flex justify-center gap-28 mb-28 flex-wrap">
+      <div class="flex justify-center gap-28 my-28 flex-wrap">
 
         <TopFeatures setLearnMoreMessage={setLearnMoreWindow} message={learnMoreWindowPhone} svg={generatePhoneSVG()} textDiv={appOnPhoneText}/>
 
@@ -223,7 +230,7 @@ function App() {
       </div>
 
       {/* Gallery photo with carousel using npm pakage ract-multi-carousel*/}
-      <div id='gallerySection' class="mb-44 text-center">
+      <div id='gallerySection' class="mb-28 text-center">
 
         <div style={{color : "rgba(0,0,0,0.5)"}} class="text-[40px] flex gap-2 justify-center"> <div>Photo</div> <div class="animate-bounce text-skyTechBlue">Gallery</div></div>
 
@@ -242,31 +249,30 @@ function App() {
           autoPlaySpeed={5000}
           draggable={false}>
 
-          <div class="mx-3">
-            <img class="" src='/droneIMG1.jpg'/>
+          <div class="mx-3 pb-5">
+            <img class="shadow-lg" src='/droneIMG1.jpg'/>
           </div>
 
           <div class="mx-3">
-            <img src='/droneIMG2.jpg' alt=''/>
+            <img class="shadow-lg" src='/droneIMG2.jpg' alt=''/>
           </div>
 
           <div class="mx-2">
-            <img src='/droneIMG5.jpg' alt=''/>
+            <img class="shadow-lg" src='/droneIMG5.jpg' alt=''/>
           </div>
 
         </Carousel>
       </div>
 
       {/* show case video with text on the side component*/} 
-      <div id='videoSection' class="mb-20">
+      <div id='videoSection'>
 
         <VideoDisplay videoYoutubeURL={videoYoutubeURLOfADrone} learnMoreMessage={setLearnMoreWindow} />
 
       </div>
 
-
       {/* Product Section showcasing 3 drones */}
-      <div class="pt-20 mb-20" id="productsSection">
+      <div class="my-28" id="productsSection">
 
         <div style={{color : "rgba(0,0,0,0.5)"}} class="text-[40px] flex gap-2 justify-center"> <div>Drones / </div> <div class="animate-bounce text-skyTechBlue">Products</div></div>
 
@@ -278,10 +284,10 @@ function App() {
 
         <ProductSelector />
 
-      </div>
+      </div>      
       
       {/* Customer Reviews Section */}
-      <div id='reviewsSection' class="pt-20 mb-20">
+      <div id='reviewsSection' class="mb-20">
         <div style={{color : "rgba(0,0,0,0.5)"}} class="text-[40px] flex gap-2 justify-center"> <div>Customer</div> <div class="animate-bounce text-skyTechBlue">Reviews</div></div>
 
         <div style = {{lineHeight : "1.05", letterSpacing : "1px"}} class="text-black opacity-50 flex justify-center font-light text-[23px] mb-10"> 
@@ -316,6 +322,10 @@ function App() {
           
           
         </div>
+      </div>
+
+      <div class="h-96 bg-skyTechBlue">
+        
       </div>
  
     </div>
