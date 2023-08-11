@@ -38,6 +38,39 @@ function ContactSection(){
         );
     }
 
+    function generateLocationIconSVG() {
+        return (
+            <svg width="50" height="50" viewBox="0 0 1048 834" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M772 250C772 388.071 660.071 500 522 500C383.929 500 272 388.071 272 250C272 111.929 383.929 0 522 0C660.071 0 772 111.929 772 250ZM400.866 250C400.866 316.901 455.099 371.134 522 371.134C588.901 371.134 643.134 316.901 643.134 250C643.134 183.099 588.901 128.866 522 128.866C455.099 128.866 400.866 183.099 400.866 250Z" fill="#3F95C6"/>
+                <path d="M525.107 730.027L300 366L292 347.072L521 376.5L751.5 347.072L743.5 366L525.107 730.027Z" fill="#3F95C6"/>
+                <path d="M767.698 643.587C870.701 654.017 952.764 670.759 1000.95 691.171C1049.14 711.584 1060.71 734.508 1033.83 756.328C1006.96 778.148 943.17 797.624 852.527 811.684C761.883 825.745 649.538 833.59 533.204 833.984C416.871 834.378 303.165 827.298 210.015 813.86C116.865 800.422 49.5679 781.39 18.7343 759.765C-12.0992 738.141 -4.71564 715.153 39.7211 694.426C84.1578 673.7 163.12 656.413 264.159 645.293L322.613 665.024C244.305 673.643 183.106 687.04 148.666 703.104C114.226 719.168 108.504 736.984 132.401 753.744C156.298 770.504 208.455 785.254 280.65 795.669C352.845 806.084 440.971 811.572 531.134 811.267C621.296 810.961 708.368 804.881 778.62 793.983C848.872 783.086 898.31 767.991 919.138 751.08C939.966 734.169 931 716.402 893.654 700.581C856.308 684.761 792.706 671.786 712.875 663.702L767.698 643.587Z" fill="#3F95C6"/>
+            </svg>
+        );
+    }
+
+    function generatePhoneIconSVG() {
+        return (
+            <svg width="50" height="50" viewBox="0 0 509 928" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="20" y="20" width="469" height="888" rx="20" stroke="#3F95C6" stroke-width="40"/>
+                <circle cx="254" cy="799" r="50" fill="#3F95C6"/>
+                <circle cx="86" cy="81" r="19" fill="#3F95C6"/>
+                <rect x="131" y="62" width="138" height="38" rx="19" fill="#3F95C6"/>
+            </svg>
+        );
+    }
+
+    function generateEmailIconSVG() {
+        return (
+            <svg width="50" height="50" viewBox="0 0 1063 624" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <mask id="path-1-inside-1_55_74" fill="white">
+                <rect x="0.175537" width="1062" height="624" rx="10"/>
+                </mask>
+                <rect x="0.175537" width="1062" height="624" rx="10" stroke="#3F95C6" stroke-width="80" mask="url(#path-1-inside-1_55_74)"/>
+                <path d="M1010.7 21.7147L530.175 332.189L51.6682 23.0623L1010.7 21.7147Z" stroke="#3F95C6" stroke-width="40"/>
+            </svg>
+        );
+    }
+
 
     return(
         <>
@@ -53,41 +86,42 @@ function ContactSection(){
                 {generateSpliterSVG()}
             </div>
 
-            <div class="flex flex-row flex-wrap justify-center gap-72 items-center">
+            <div class="flex flex-row flex-wrap justify-center gap-60 items-center pl-5">
                 
                 <div class="flex flex-col gap-10">
                     {/* info details (phone, location, email) */}
 
-                    <div>
+                    <div class="flex flex-row justify-end">
 
-                        <div class="text-right border-r-2 pr-2 text-xl border-r-skyTechBlue">
+                        <div class="text-right border-r-2 pr-3 text-xl border-r-[rgba(63,149,198,0.5)]">
                             <span style = {{lineHeight : "1.05", letterSpacing : "1px"}} class="opacity-50">Phone <br />
                             <span class="font-thin">555-555-5555</span></span>
                         </div>
 
-                        <div>{/* phone icon*/}</div>
+                        <div class="pl-5">{generatePhoneIconSVG()}</div>
 
                     </div>
 
-                    <div>
 
-                        <div class="text-right border-r-2 pr-2 text-xl border-r-skyTechBlue">
+                    <div class="flex flex-row justify-end">
+
+                        <div class="text-right border-r-2 pr-3 text-xl border-r-[rgba(63,149,198,0.5)]">
                             <span style = {{lineHeight : "1.05", letterSpacing : "1px"}} class="opacity-50">Location <br />
                             <span class="font-thin">555 St-Charles , Longueuil , QC</span></span>
                         </div>
 
-                        <div>{/* Location icon*/}</div>
+                        <div class="pl-5">{generateLocationIconSVG()}</div>
 
                     </div>
 
-                    <div>
+                    <div class="flex flex-row justify-end">
 
-                        <div class="text-right border-r-2 pr-2 text-xl border-r-skyTechBlue">
+                        <div class="text-right border-r-2 pr-3 text-xl border-r-[rgba(63,149,198,0.5)]">
                             <span style = {{lineHeight : "1.05", letterSpacing : "1px"}} class="opacity-50">E-Mail <br />
                             <span class="font-thin">SkyTech@example.com</span></span>
                         </div>
 
-                        <div>{/* Email icon*/}</div>
+                        <div class="pl-5">{generateEmailIconSVG()}</div>
 
                     </div>
 
