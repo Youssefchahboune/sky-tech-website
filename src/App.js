@@ -8,6 +8,7 @@ import { useEffect, useState } from 'react';
 import ReviewCard from './components/ReviewCard';
 import ProductSelector from './components/ProductSelector';
 import ContactSection from './components/ContactSection';
+import { Link } from 'react-scroll';
 
 function App() {
 
@@ -331,7 +332,66 @@ function App() {
       </div>
 
       {/* bottom section */}
-      <div class="h-96 bg-skyTechBlue">
+      <div class="h-[400px] bg-skyTechBlue">
+
+        <div class="text-center flex flex-col gap-2 py-10">
+
+          <div class="text-white" style={{letterSpacing : "1px"}}>Shop with Sky Tech</div>
+
+          <p class="text-white font-thin" style={{letterSpacing : "1px"}}>Learn more about our collection of drones</p>
+
+          <div>
+            <button class="bg-white px-6 py-1 text-[rgba(0,0,0,0.7)] rounded-full font-" style={{letterSpacing : "0.5px"}}>
+              <Link to='productsSection' smooth={true} duration={500}>
+                Shop Now
+              </Link>
+            </button>
+          </div>
+
+        </div>
+        
+        <hr class="mx-[14%] mb-7"/>
+
+        <div class="flex flex-row justify-center flex-wrap gap-28 items-center">
+
+          <div class="flex flex-row flex-wrap gap-20 text-xl">
+            <div class="flex flex-col text-white">
+              <div>Account</div>
+              <a class="cursor-pointer font-light" style={{letterSpacing : "1px"}}>Sign In</a>
+              <a class="cursor-pointer font-light" style={{letterSpacing : "1px"}}>Log In</a>
+              <a class="cursor-pointer font-light" style={{letterSpacing : "1px"}}>Policies</a>
+            </div>
+
+            <div class="flex flex-col text-white">
+              <div>Support</div>
+              <a class="cursor-pointer font-light" style={{letterSpacing : "1px"}}>Sign In</a>
+              <a class="cursor-pointer font-light" style={{letterSpacing : "1px"}}>Log In</a>
+              <a class="cursor-pointer font-light" style={{letterSpacing : "1px"}}>Policies</a>
+            </div>
+
+            <div class="flex flex-col text-white">
+              <div>Explore</div>
+              <a class="cursor-pointer font-light" style={{letterSpacing : "1px"}}>Sign In</a>
+              <a class="cursor-pointer font-light" style={{letterSpacing : "1px"}}>Log In</a>
+              <a class="cursor-pointer font-light" style={{letterSpacing : "1px"}}>Policies</a>
+            </div>
+
+            <div class="flex flex-col text-white">
+              <div>Fly Safely</div>
+              <a class="cursor-pointer font-light" style={{letterSpacing : "1px"}}>Sign In</a>
+              <a class="cursor-pointer font-light" style={{letterSpacing : "1px"}}>Log In</a>
+              <a class="cursor-pointer font-light" style={{letterSpacing : "1px"}}>Policies</a>
+            </div>
+          </div>
+
+          <div class="w-96 h-24 bg-gray-400">
+            {/* google map api */}
+            <div class="flex justify-center items-center h-full">
+              google map API
+            </div>
+          </div>
+
+        </div>
         
       </div>
  

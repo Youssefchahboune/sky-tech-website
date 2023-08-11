@@ -129,7 +129,7 @@ function ContactSection(){
 
                 <div>
                     {/* form */}
-                    <form class="flex flex-col gap-10" action="">
+                    <form class="flex flex-col gap-10" action="mailto:Chahbouney2000@outlook.fr">
 
                         <div class="flex flex-row gap-4">
                             <input style = {{lineHeight : "1.05", letterSpacing : "1px"}}  class="border-b font-thin border-b-[rgba(0,0,0,0.3)]" type="text" placeholder='First Name' />
