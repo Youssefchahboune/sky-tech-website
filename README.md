@@ -20,5 +20,6 @@ This project harnesses a versatile stack of technologies to deliver a seamless u
 ## Website Features Video (Youtube)
 If you'd like to see the website and its features without running it yourself, you can watch this YouTube video where I showcase the website. Click the link below to view the video demonstration of the website's design and functionality.
 
+[![Watch the video](https://youtu.be/h0HjDmf3joo)
 
 
